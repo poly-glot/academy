@@ -1,0 +1,134 @@
+options_pages:
+  academy_settings:
+    icon: dashicons-admin-settings
+    title: Site settings
+
+field_groups:
+  settings_header:
+    options_pages: [academy_settings]
+    title: Header
+    fields:
+      header_account_label:
+        label: Account button label
+        type: text
+        width: 50
+      header_account_url:
+        label: Account button link
+        type: text
+        width: 50
+      header_join_label:
+        label: Join button label
+        type: text
+        width: 50
+      header_join_url:
+        label: Join button link
+        type: text
+        width: 50
+
+  settings_footer:
+    options_pages: [academy_settings]
+    title: Footer
+    fields:
+      footer_description:
+        label: Description
+        rows: 3
+        type: textarea
+      social:
+        fields:
+          icon: { choices: { linkedin: LinkedIn, youtube: YouTube }, label: Icon, type: select, width: 25 }
+          label: { label: Label, type: text, width: 25 }
+          hidden: { label: Screen-reader suffix, type: text, width: 25 }
+          url: { label: Link, type: text, width: 25 }
+        label: Social links
+        type: repeater
+      footer_notice:
+        label: Demonstration notice
+        rows: 3
+        type: textarea
+      copyright_line:
+        label: Copyright line
+        rows: 2
+        type: textarea
+
+  settings_company:
+    options_pages: [academy_settings]
+    title: Company
+    fields:
+      address:
+        description: One line per row.
+        label: Postal address
+        rows: 4
+        type: textarea
+        width: 50
+      company_notice:
+        label: Registered-company notice (Contact page)
+        rows: 4
+        type: textarea
+        width: 50
+
+  settings_news:
+    options_pages: [academy_settings]
+    title: News
+    fields:
+      news_block_kicker:
+        label: Latest news kicker (Home, About)
+        type: text
+        width: 33
+      news_block_title:
+        label: Latest news heading (Home, About)
+        type: text
+        width: 33
+      news_block_link_label:
+        label: Latest news link label (Home, About)
+        type: text
+        width: 34
+      article_note:
+        label: Closing line on every article
+        rows: 2
+        type: textarea
+
+  settings_certification:
+    options_pages: [academy_settings]
+    title: Certification
+    fields:
+      certification_title:
+        label: Overview title (h1)
+        type: text
+        width: 50
+      certification_meta_description:
+        label: Overview meta description
+        rows: 2
+        type: textarea
+        width: 50
+      certification_lead:
+        label: Overview sub-line
+        rows: 2
+        type: textarea
+      certification_hero_image:
+        label: Overview hero image
+        type: image
+      certification_overview_title:
+        label: Overview heading
+        type: text
+      certification_overview:
+        description: Separate paragraphs with a blank line.
+        label: Overview text
+        rows: 8
+        type: textarea
+      certification_specialist_title:
+        label: Specialist heading
+        type: text
+        width: 50
+      certification_specialist_intro:
+        label: Specialist intro
+        type: text
+        width: 50
+      certificate_award_text:
+        label: Certificate page award text
+        rows: 2
+        type: textarea
+        width: 50
+      certificate_awarded_by:
+        label: Certificate page awarded-by line
+        type: text
+        width: 50

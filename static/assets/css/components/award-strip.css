@@ -1,0 +1,23 @@
+.award-strip {
+  align-items: center;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5) var(--space-7);
+  justify-content: space-between;
+  padding: var(--space-6);
+}
+
+.award-strip__text {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 36rem;
+}
+
+.award-strip__by {
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}

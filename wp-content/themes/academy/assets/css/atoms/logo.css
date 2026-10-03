@@ -1,0 +1,57 @@
+.logo {
+  align-items: center;
+  color: var(--navy);
+  display: inline-flex;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  gap: var(--space-3);
+  letter-spacing: 0.22em;
+  line-height: 1;
+  min-height: 2.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo::before {
+  background: var(--line);
+  content: "";
+  height: 1.75rem;
+  width: 1px;
+}
+
+.logo:hover {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.logo--on-dark {
+  font-size: var(--text-base);
+}
+
+.logo--on-dark,
+.logo--on-dark:hover {
+  color: var(--white);
+}
+
+.logo--on-dark::before {
+  background: var(--on-navy-rule);
+  height: 1.5rem;
+}
+
+.logo__mark {
+  color: var(--brand);
+  flex: none;
+  height: 2.25rem;
+  order: -1;
+  width: 2.25rem;
+}
+
+.logo--on-dark .logo__mark {
+  height: 2rem;
+  width: 2rem;
+}
+
+.mark__glyph {
+  fill: var(--white);
+}

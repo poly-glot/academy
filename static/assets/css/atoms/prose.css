@@ -1,0 +1,66 @@
+.prose {
+  color: var(--ink);
+  font-size: var(--text-md);
+  line-height: 1.7;
+  max-width: var(--measure);
+}
+
+.prose > * + * {
+  margin-top: var(--space-5);
+}
+
+.prose h2 {
+  font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.75rem);
+  margin-top: var(--space-8);
+}
+
+.prose h3 {
+  font-size: var(--text-h3);
+  margin-top: var(--space-7);
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose h2 + *,
+.prose h3 + * {
+  margin-top: var(--space-3);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: var(--space-5);
+}
+
+.prose li + li {
+  margin-top: var(--space-2);
+}
+
+.prose li::marker {
+  color: var(--brand);
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose blockquote {
+  border-top: 3px solid var(--brand);
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  line-height: 1.4;
+  padding-top: var(--space-4);
+}
+
+.prose--sections h2 {
+  color: var(--brand);
+  font-size: var(--text-h3);
+  margin-top: var(--space-7);
+}
+
+.section--navy .prose {
+  color: var(--on-navy-body);
+}

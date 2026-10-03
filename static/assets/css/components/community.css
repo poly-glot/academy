@@ -1,0 +1,11 @@
+.community-item {
+  border-top: 2px solid var(--brand);
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+  padding-top: var(--space-5);
+}
+
+.community-item__text {
+  color: var(--muted);
+}

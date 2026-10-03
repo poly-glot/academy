@@ -1,0 +1,25 @@
+field_groups:
+  post_article:
+    post_types: [post]
+    title: Article
+    fields:
+      standfirst:
+        label: Standfirst
+        rows: 3
+        searchable: true
+        type: textarea
+      author_profile:
+        column: true
+        label: Author (byline)
+        post_types: [person]
+        type: post
+        ui: select
+      hero_image:
+        description: Wide picture above the article. The card picture is the featured image.
+        label: Hero image
+        type: image
+      subjects:
+        fields:
+          text: { label: Subject, type: text }
+        label: Subjects
+        type: repeater

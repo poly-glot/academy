@@ -1,0 +1,428 @@
+.icon_choices:
+  calendar: Calendar
+  certificate: Certificate
+  clipboard-check: Clipboard with tick
+  link: Link
+  mail: Envelope
+  people: People
+  research: Research
+  screen: Screen
+  share: Share
+  user: Person
+
+field_groups:
+  page_hero:
+    post_types: [page]
+    title: Hero and search
+    fields:
+      meta_description:
+        label: Meta description
+        rows: 2
+        type: textarea
+      hero_kicker:
+        label: Hero kicker
+        type: text
+        width: 50
+      hero_title:
+        description: The h1. One line per row; Home shows each row as its own line.
+        label: Hero title
+        rows: 2
+        type: textarea
+        width: 50
+      hero_lead:
+        description: Email addresses become mailto links.
+        label: Hero lead
+        rows: 3
+        type: textarea
+      hero_button_label:
+        label: Button label
+        type: text
+        width: 50
+      hero_button_url:
+        label: Button link
+        type: text
+        width: 50
+      hero_link_label:
+        label: Text link label
+        type: text
+        width: 50
+      hero_link_url:
+        label: Text link
+        type: text
+        width: 50
+
+  page_intro_band:
+    post_types: [page]
+    title: Intro band (About, Membership)
+    fields:
+      intro_kicker:
+        label: Kicker
+        type: text
+        width: 50
+      intro_title:
+        label: Heading
+        type: text
+        width: 50
+      intro_text:
+        description: Separate paragraphs with a blank line.
+        label: Text
+        rows: 6
+        type: textarea
+      intro_link_label:
+        label: Link label
+        type: text
+        width: 50
+      intro_link_url:
+        label: Link
+        type: text
+        width: 50
+
+  page_mission:
+    post_types: [page]
+    title: Mission band (Home, About)
+    fields:
+      mission_kicker:
+        label: Kicker
+        type: text
+        width: 50
+      mission_title:
+        label: Heading
+        type: text
+        width: 50
+      mission_text:
+        label: Text
+        rows: 4
+        type: textarea
+      mission_button_label:
+        label: Button label
+        type: text
+        width: 50
+      mission_button_url:
+        label: Button link
+        type: text
+        width: 50
+
+  page_home:
+    post_types: [page]
+    title: Home page
+    fields:
+      home_why_kicker:
+        label: Why kicker
+        type: text
+        width: 50
+      home_why_title:
+        label: Why heading
+        type: text
+        width: 50
+      home_why_text:
+        label: Why text
+        rows: 4
+        type: textarea
+      home_why_items:
+        fields:
+          icon: { choices: !reference [.icon_choices], label: Icon, type: select, width: 25 }
+          title: { label: Title, type: text, width: 75 }
+          text: { label: Line, type: text }
+        label: Why rows
+        type: repeater
+      home_join_title:
+        label: Join band heading
+        type: text
+      home_join_text:
+        label: Join band sentence
+        rows: 2
+        type: textarea
+      home_join_link_label:
+        label: Join band text link label
+        type: text
+        width: 50
+      home_join_link_url:
+        label: Join band text link
+        type: text
+        width: 50
+      home_join_button_label:
+        label: Join band button label
+        type: text
+        width: 50
+      home_join_button_url:
+        label: Join band button link
+        type: text
+        width: 50
+
+  page_about:
+    post_types: [page]
+    title: About page
+    fields:
+      about_goals_kicker:
+        label: Goals kicker
+        type: text
+        width: 50
+      about_goals_title:
+        label: Goals heading
+        type: text
+        width: 50
+      about_goals:
+        fields:
+          text: { label: Goal, type: text }
+        label: Goals
+        type: repeater
+      about_film_image:
+        label: Film still
+        type: image
+        width: 50
+      about_film_caption:
+        label: Film caption
+        type: text
+        width: 50
+      about_people_kicker:
+        label: People kicker
+        type: text
+        width: 50
+      about_people_title:
+        label: People heading
+        type: text
+        width: 50
+      about_people_intro:
+        label: People intro
+        rows: 3
+        type: textarea
+
+  page_membership:
+    post_types: [page]
+    title: Membership page
+    fields:
+      membership_ways_title:
+        label: Three ways heading
+        type: text
+      membership_ways:
+        fields:
+          icon: { choices: !reference [.icon_choices], label: Icon, type: select, width: 25 }
+          title: { label: Title, type: text, width: 75 }
+          text: { label: Text, rows: 4, type: textarea }
+        label: Three ways (long)
+        type: repeater
+      membership_ways_short:
+        fields:
+          icon: { choices: !reference [.icon_choices], description: Leave empty to show the figure instead., label: Icon, type: select, width: 25 }
+          figure: { label: Figure, type: text, width: 25 }
+          figure_hidden: { label: Figure screen-reader text, type: text, width: 50 }
+          text: { label: Text, rows: 2, type: textarea }
+        label: Three ways (short)
+        type: repeater
+      membership_join_title:
+        label: Join heading
+        type: text
+      membership_join_text:
+        description: Email addresses become mailto links.
+        label: Join text
+        rows: 4
+        type: textarea
+      membership_join_button_label:
+        label: Join button label
+        type: text
+        width: 50
+      membership_join_button_url:
+        label: Join button link
+        type: text
+        width: 50
+      membership_join_link_label:
+        label: Join text link label
+        type: text
+        width: 50
+      membership_join_link_url:
+        label: Join text link
+        type: text
+        width: 50
+      membership_levels_title:
+        label: Levels heading
+        type: text
+      membership_levels_intro:
+        label: Levels intro
+        rows: 2
+        type: textarea
+      membership_levels:
+        fields:
+          title: { label: Level, type: text }
+          intro: { label: Who it is for, rows: 2, type: textarea }
+          overview: { label: Overview, rows: 2, type: textarea }
+          benefits:
+            fields:
+              text: { label: Benefit, type: text }
+            label: Benefits
+            type: repeater
+          how_text: { label: How to become one (paragraph), rows: 2, type: textarea }
+          how_steps:
+            fields:
+              text: { label: Step, type: text }
+            label: How to become one (numbered steps)
+            type: repeater
+        label: Levels
+        type: repeater
+      membership_fees_title:
+        label: Fees heading
+        type: text
+      membership_fees_intro:
+        label: Fees intro
+        rows: 2
+        type: textarea
+      membership_fees:
+        fields:
+          icon: { choices: !reference [.icon_choices], label: Icon, type: select, width: 25 }
+          title: { label: Title, type: text, width: 75 }
+          price: { label: Price, type: text, width: 50 }
+          unit: { label: Unit, type: text, width: 50 }
+          text: { description: Email addresses become mailto links., label: Note, rows: 2, type: textarea }
+        label: Fees
+        type: repeater
+      membership_links:
+        fields:
+          label: { label: Label, type: text, width: 33 }
+          hidden: { label: Screen-reader suffix, type: text, width: 33 }
+          url: { label: Link, type: text, width: 34 }
+        label: Links row
+        type: repeater
+
+  page_courses:
+    post_types: [page]
+    title: Courses page
+    fields:
+      courses_intro_title:
+        label: Intro heading
+        type: text
+      courses_intro_text:
+        description: Separate paragraphs with a blank line.
+        label: Intro text
+        rows: 6
+        type: textarea
+      courses_steps_title:
+        label: Steps heading
+        type: text
+      courses_steps:
+        fields:
+          title: { label: Title, type: text, width: 30 }
+          text: { label: Text, rows: 2, type: textarea, width: 70 }
+        label: Steps
+        type: repeater
+      courses_steps_primary_label:
+        label: Steps first button label
+        type: text
+        width: 50
+      courses_steps_primary_url:
+        label: Steps first button link
+        type: text
+        width: 50
+      courses_steps_secondary_label:
+        label: Steps second button label
+        type: text
+        width: 50
+      courses_steps_secondary_url:
+        label: Steps second button link
+        type: text
+        width: 50
+      courses_list_title:
+        label: Course list heading
+        type: text
+      courses_series:
+        fields:
+          title: { label: Series, type: text }
+          groups:
+            fields:
+              title: { label: Group, type: text }
+              courses:
+                fields:
+                  code: { label: Code, type: text, width: 25 }
+                  title: { label: Course, type: text, width: 75 }
+                label: Courses
+                type: repeater
+            label: Groups
+            type: repeater
+        label: Course list columns
+        type: repeater
+      courses_certificates_title:
+        label: Certificates band heading
+        type: text
+      courses_certificates_text:
+        label: Certificates band text
+        rows: 2
+        type: textarea
+      courses_certificates_links:
+        fields:
+          label: { label: Label, type: text, width: 50 }
+          url: { label: Link, type: text, width: 50 }
+        label: Certificates band links
+        type: repeater
+
+  page_community:
+    post_types: [page]
+    title: Community page
+    fields:
+      community_sections:
+        fields:
+          anchor: { label: Anchor id, type: text, width: 33 }
+          title: { label: Heading, type: text, width: 67 }
+          text: { label: Text, rows: 4, type: textarea }
+          link_label: { label: Link label, type: text, width: 33 }
+          link_hidden: { label: Screen-reader suffix, type: text, width: 33 }
+          link_url: { label: Link, type: text, width: 34 }
+        label: Sections
+        type: repeater
+
+  page_contact:
+    post_types: [page]
+    title: Contact page
+    fields:
+      contact_help_title:
+        label: Questions heading
+        type: text
+      contact_faqs:
+        fields:
+          question: { label: Question, type: text }
+          answer: { label: Answer, rows: 2, type: textarea }
+        label: Common questions
+        type: repeater
+      contact_details_title:
+        label: Details heading
+        type: text
+      contact_groups:
+        fields:
+          label: { label: Label, type: text, width: 50 }
+          email: { label: Email, type: email, width: 50 }
+          phone: { label: Phone (display), type: text, width: 33 }
+          phone_href: { label: Phone (tel link), type: text, width: 33 }
+          note: { label: Note after the phone, type: text, width: 34 }
+        label: Who to contact
+        type: repeater
+      contact_address_title:
+        label: Address heading
+        type: text
+      contact_map_alt:
+        label: Map alt text
+        type: text
+        width: 50
+      contact_map_caption:
+        label: Map caption
+        type: text
+        width: 50
+
+  page_form:
+    post_types: [page]
+    title: Form (Contact, My Academy)
+    fields:
+      form_title:
+        label: Form heading
+        type: text
+      form_intro:
+        label: Form intro
+        rows: 2
+        type: textarea
+      form_note:
+        label: Demonstration note
+        rows: 2
+        type: textarea
+      thank_you_title:
+        label: Thank-you heading
+        type: text
+      thank_you_text:
+        label: Thank-you message
+        rows: 3
+        type: textarea

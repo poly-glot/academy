@@ -1,0 +1,123 @@
+.diagonal-hero {
+  background: var(--navy);
+  color: var(--on-navy-body);
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.diagonal-hero h1 {
+  color: var(--white);
+}
+
+.diagonal-hero__inner {
+  padding-block: var(--space-7) var(--space-8);
+}
+
+.diagonal-hero__copy {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+  max-width: 38rem;
+}
+
+.diagonal-hero__lead {
+  color: var(--on-navy-body);
+  font-size: var(--text-lead);
+}
+
+.diagonal-hero__picture {
+  display: block;
+  order: -1;
+}
+
+.diagonal-hero__image {
+  background: var(--tint);
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+  height: 15rem;
+  object-fit: cover;
+  object-position: 70% 30%;
+  width: 100%;
+}
+
+@media (min-width: 62rem) {
+  .diagonal-hero__inner {
+    padding-block: var(--space-9);
+  }
+
+  .diagonal-hero__copy {
+    max-width: min(38rem, 52%);
+  }
+
+  .diagonal-hero__picture {
+    inset: 0 0 0 auto;
+    position: absolute;
+    width: 50%;
+    z-index: -1;
+  }
+
+  .diagonal-hero__image {
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 58% 100%);
+    height: 100%;
+    object-position: 60% 30%;
+  }
+}
+
+.page-title {
+  border-bottom: 1px solid var(--border);
+  padding-block: var(--space-8) var(--space-7);
+}
+
+.page-title__inner {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+}
+
+.page-title__lead {
+  color: var(--muted);
+  font-size: var(--text-lead);
+  max-width: var(--measure);
+}
+
+.page-title--soft {
+  background: var(--soft);
+}
+
+.article-hero {
+  isolation: isolate;
+  position: relative;
+}
+
+.article-hero::before {
+  background: var(--navy);
+  clip-path: polygon(0 0, 22% 0, 100% 100%, 0 100%);
+  content: "";
+  inset: 0 auto 0 0;
+  opacity: 0.82;
+  position: absolute;
+  width: min(40%, 32rem);
+  z-index: 1;
+}
+
+.article-hero__picture {
+  display: block;
+}
+
+.article-hero__image {
+  background: var(--tint);
+  height: clamp(14rem, 30vw, 26rem);
+  object-fit: cover;
+  width: 100%;
+}
+
+.article-hero__bar {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(50%);
+  z-index: 2;
+}

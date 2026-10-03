@@ -1,0 +1,32 @@
+.facts {
+  border-top: 1px solid var(--on-navy-rule);
+  display: grid;
+  width: 100%;
+}
+
+.facts__row {
+  border-bottom: 1px solid var(--on-navy-rule);
+  display: grid;
+  gap: var(--space-1) var(--space-5);
+  padding-block: var(--space-3);
+}
+
+.facts__label {
+  color: var(--on-navy-label);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.facts__value {
+  color: var(--white);
+  font-weight: 500;
+}
+
+@media (min-width: 36rem) {
+  .facts__row {
+    align-items: baseline;
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+}

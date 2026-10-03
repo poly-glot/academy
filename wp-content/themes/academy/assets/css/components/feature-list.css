@@ -1,0 +1,26 @@
+.feature-list {
+  border-top: 1px solid var(--line);
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list__item {
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: var(--space-5);
+  padding-block: 1.75rem;
+}
+
+.feature-list__body {
+  display: grid;
+  gap: 0.375rem;
+}
+
+.feature-list__title {
+  font-size: var(--text-h3);
+}
+
+.feature-list__text {
+  color: var(--muted);
+}

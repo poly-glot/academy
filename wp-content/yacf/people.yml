@@ -1,0 +1,31 @@
+post_types:
+  person:
+    icon: dashicons-groups
+    label: People
+    public: false
+    show_ui: true
+    singular: Person
+    supports: [title, thumbnail, page-attributes]
+
+field_groups:
+  person_details:
+    post_types: [person]
+    title: Profile
+    fields:
+      role:
+        column: { sortable: true }
+        label: Role
+        type: text
+        width: 50
+      group:
+        choices: { founding: Founding members, staff: Staff }
+        column: { sortable: true }
+        default: staff
+        label: Group (About page tab)
+        type: select
+        width: 50
+      bio:
+        label: Bio (about 40 words)
+        rows: 4
+        searchable: true
+        type: textarea

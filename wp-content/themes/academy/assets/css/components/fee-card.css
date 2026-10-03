@@ -1,0 +1,37 @@
+.fee-card {
+  align-content: start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  display: grid;
+  gap: var(--space-3);
+  height: 100%;
+  justify-items: start;
+  padding: var(--space-6);
+}
+
+.fee-card__title {
+  font-size: var(--text-h3);
+  margin-top: var(--space-2);
+}
+
+.fee-card__price {
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.fee-card__unit {
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.fee-card__text {
+  color: var(--muted);
+}

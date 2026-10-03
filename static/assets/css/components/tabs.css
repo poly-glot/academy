@@ -1,0 +1,47 @@
+.tabs__list {
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 var(--space-7);
+  padding: 0;
+}
+
+.tabs__tab {
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+  display: inline-flex;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: -1px;
+  min-height: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tabs__tab:hover {
+  border-bottom-color: var(--line);
+  color: var(--navy);
+}
+
+.tabs:not(:has(.tabs__panel:target)) .tabs__item:first-child .tabs__tab,
+.tabs:has(#founding:target) .tabs__tab[href="#founding"],
+.tabs:has(#staff:target) .tabs__tab[href="#staff"] {
+  border-bottom-color: var(--brand);
+  color: var(--navy);
+}
+
+.tabs__panel {
+  display: none;
+  scroll-margin-top: var(--space-8);
+}
+
+.tabs__panel:target,
+.tabs:not(:has(.tabs__panel:target)) .tabs__panel:first-of-type {
+  display: block;
+}

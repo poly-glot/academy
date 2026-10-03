@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+design-source/
+inspiration/
+feedback/
+node_modules/
+.codegraph/
+.zvec-grep/
+wp-content/uploads/
+wp-content/themes/academy/assets/css/main.css
+.impeccable/

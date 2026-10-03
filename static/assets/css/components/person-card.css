@@ -1,0 +1,56 @@
+.people-grid {
+  display: grid;
+  gap: var(--space-7) var(--space-6);
+  grid-template-columns: minmax(0, 1fr);
+  list-style: none;
+  padding: 0;
+}
+
+.person-card {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+}
+
+.person-card__picture {
+  aspect-ratio: 3 / 4;
+  background: var(--tint);
+  border-radius: var(--radius-card);
+  display: block;
+  margin-bottom: var(--space-3);
+  overflow: hidden;
+  width: 100%;
+}
+
+.person-card__photo {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.person-card__name {
+  font-size: var(--text-h3);
+}
+
+.person-card__role {
+  color: var(--brand);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.person-card__bio {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 30rem) {
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 62rem) {
+  .people-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

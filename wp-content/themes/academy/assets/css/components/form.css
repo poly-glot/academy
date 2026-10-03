@@ -1,0 +1,104 @@
+.form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.form__row {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field__label {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.field__optional {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.field__hint {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.field__input,
+.field__select,
+.field__textarea {
+  background: var(--white);
+  border: 1.5px solid var(--muted);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  min-height: 3rem;
+  padding: var(--space-2) var(--space-3);
+  width: 100%;
+}
+
+.field__textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field__input:hover,
+.field__select:hover,
+.field__textarea:hover {
+  border-color: var(--navy);
+}
+
+.form__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-5);
+  justify-content: space-between;
+}
+
+.form--on-dark .field__label {
+  color: var(--on-navy-label);
+}
+
+.form--on-dark .field__hint {
+  color: var(--on-navy-body);
+}
+
+.form--on-dark a {
+  color: var(--white);
+}
+
+.enquiry {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: var(--space-5);
+  padding: clamp(var(--space-5), 3vw, var(--space-7));
+}
+
+@media (min-width: 48rem) {
+  .form__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.target-message {
+  display: none;
+}
+
+.target-message:target {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.target-message--panel:target {
+  background: var(--tint);
+  border-radius: var(--radius);
+  color: var(--ink);
+  padding: var(--space-5);
+}

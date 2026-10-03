@@ -1,0 +1,88 @@
+post_types:
+  certificate:
+    has_archive: certification
+    icon: dashicons-awards
+    label: Certificates
+    rewrite: { slug: certification, with_front: false }
+    singular: Certificate
+    supports: [title, thumbnail, page-attributes]
+
+field_groups:
+  certificate_details:
+    post_types: [certificate]
+    title: Certificate
+    fields:
+      abbreviation:
+        column: true
+        label: Abbreviation
+        type: text
+        width: 25
+      tier:
+        choices: { core: Core (card on the overview), specialist: Specialist (link on the overview) }
+        column: { sortable: true }
+        default: specialist
+        label: Overview placement
+        type: select
+        width: 25
+      overview_kicker:
+        description: Core certificates only.
+        label: Overview kicker
+        type: text
+        width: 50
+      summary:
+        description: Core certificates only. Card text on the overview.
+        label: Overview summary
+        rows: 4
+        searchable: true
+        type: textarea
+      course_code:
+        column: true
+        label: Course code
+        type: text
+        width: 33
+      level:
+        label: Level
+        type: text
+        width: 33
+      category:
+        label: Category
+        type: text
+        width: 34
+      duration:
+        label: Duration
+        type: text
+        width: 50
+      assessment:
+        label: Assessment
+        type: text
+        width: 50
+      price:
+        label: Price
+        type: text
+      vision:
+        description: Also used as the meta description.
+        label: Course vision
+        rows: 3
+        searchable: true
+        type: textarea
+      participants:
+        label: Who should participate?
+        rows: 4
+        type: textarea
+      description:
+        label: Course description
+        rows: 6
+        type: textarea
+      outline:
+        fields:
+          text: { label: Topic, type: text }
+        label: Course outline
+        type: repeater
+      experts:
+        label: Course experts
+        rows: 3
+        type: textarea
+      benefits:
+        label: Key benefits
+        rows: 3
+        type: textarea
